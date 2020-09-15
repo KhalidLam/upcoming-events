@@ -7,7 +7,7 @@ function App() {
     <div className='App'>
       <NavBar />
       <div className='container bg-white'>
-        <h1 style={{ margin: "2rem" }}>Test Calendar</h1>
+        <h2 className='m-2'>My Calendar</h2>
         <CustomCalendar />
       </div>
     </div>

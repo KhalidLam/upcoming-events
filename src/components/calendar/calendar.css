@@ -1,0 +1,55 @@
+/* ------------ Custom Calendar Changes ------------ */
+.fc-toolbar-chunk > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Arrow buttons */
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-top: 0.5rem;
+  margin-bottom: 0.8em;
+}
+
+.fc .fc-button-primary {
+  color: black;
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+}
+
+.fc .fc-button-primary:hover,
+.fc .fc-button-primary:focus,
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  color: #1e2b37;
+  background-color: transparent;
+  border: transparent;
+}
+
+.fc .fc-button .fc-icon {
+  vertical-align: unset;
+  font-size: 1.2em;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 14px;
+  padding: 0 19px;
+  color: #364253;
+  margin: 0;
+}
+
+/* Week Days Header Cell */
+.fc .fc-col-header-cell-cushion {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* Day Cell */
+.fc .fc-day-other .fc-daygrid-day-top {
+  opacity: 0;
+}
+
+.fc .fc-daygrid-day-top {
+  flex-direction: row;
+}
