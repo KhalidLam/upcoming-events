@@ -1,0 +1,40 @@
+/* ------------ Header ------------ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  width: 100%;
+  background-color: var(--white-color);
+}
+
+/* .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--white-color);
+  border: 1px solid red;
+} */
+
+.logo {
+  font-size: 18px;
+  color: var(--dark-color);
+  text-transform: uppercase;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_info {
+  margin-right: 16px;
+  font-size: 16px;
+}
+
+.user_pic {
+  display: flex;
+}

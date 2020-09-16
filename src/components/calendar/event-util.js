@@ -1,7 +1,30 @@
 let eventGuid = 0;
-let todayStr = new Date().toISOString().replace(/T.*$/, ""); // YYYY-MM-DD of today
+// let todayStr = new Date().toISOString().replace(/T.*$/, ""); // YYYY-MM-DD of today
 
 export const INITIAL_EVENTS = [
+  {
+    groupId: "redEvents",
+    title: "Event 2",
+    startRecur: "2020-09-14",
+    endRecur: "2020-09-17",
+    display: "background",
+    color: "#d44646",
+  },
+  {
+    groupId: "blueEvents",
+    title: "Meeting one to one",
+    startRecur: "2020-09-11",
+    endRecur: "2020-09-13",
+    display: "background",
+    color: "#1e32ca",
+  },
+  {
+    id: createEventId(),
+    title: "Event 3",
+    date: "2020-10-01",
+    display: "background",
+    color: "#2D9CDB",
+  },
   // {
   //   id: createEventId(),
   //   title: "All-day event",
@@ -12,16 +35,6 @@ export const INITIAL_EVENTS = [
   //   title: "Timed event",
   //   start: todayStr + "T12:00:00",
   // },
-  {
-    groupId: "blueEvents", // recurrent events in this group move together
-    // startTime: "10:45:00",
-    // endTime: "12:45:00",
-    title: "recurse",
-    startRecur: "2020-09-14",
-    endRecur: "2020-09-17",
-    display: "background",
-    color: "#219653",
-  },
   // {
   //   id: createEventId(),
   //   title: "Test event again",
@@ -42,14 +55,14 @@ export const INITIAL_EVENTS = [
   //   display: "background",
   //   color: "green",
   // },
-  {
-    id: createEventId(),
-    title: "event 3",
-    start: "2020-09-11T10:00:00",
-    end: "2020-09-11T16:00:00",
-    display: "background",
-    color: "#828282",
-  },
+  // {
+  //   id: createEventId(),
+  //   title: "event 3",
+  //   start: "2020-09-11T10:00:00",
+  //   end: "2020-09-11T16:00:00",
+  //   display: "background",
+  //   color: "#828282",
+  // },
   // {
   //   id: createEventId(),
   //   title: "event 6",
@@ -66,20 +79,13 @@ export const INITIAL_EVENTS = [
   //   overlap: false,
   //   display: "background",
   // },
-  {
-    id: createEventId(),
-    title: "event 2",
-    date: "2020-10-01",
-    display: "background",
-    color: "#2D9CDB",
-  },
-  {
-    id: createEventId(),
-    title: "event 2",
-    date: "2020-10-02",
-    display: "background",
-    color: "#2D9CDB",
-  },
+  // {
+  //   id: createEventId(),
+  //   title: "event 2",
+  //   date: "2020-10-02",
+  //   display: "background",
+  //   color: "#2D9CDB",
+  // },
 ];
 
 export function createEventId() {

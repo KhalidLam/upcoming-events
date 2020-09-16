@@ -1,0 +1,32 @@
+[
+  {
+    "groupId": "redEvents",
+    "title": "Event 2",
+    "startRecur": "2020-09-14",
+    "endRecur": "2020-09-17",
+    "display": "background",
+    "color": "#d44646"
+  },
+  {
+    "groupId": "blueEvents",
+    "title": "Meeting one to one",
+    "startRecur": "2020-09-11",
+    "endRecur": "2020-09-13",
+    "display": "background",
+    "color": "#1e32ca"
+  },
+  {
+    "id": "5",
+    "title": "Event 3",
+    "date": "2020-10-01",
+    "display": "background",
+    "color": "#2D9CDB"
+  },
+  {
+    "id": "54",
+    "title": "Event 54",
+    "date": "2020-09-25",
+    "display": "background",
+    "color": "#2D9CDB"
+  }
+]
