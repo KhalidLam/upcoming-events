@@ -1,0 +1,42 @@
+/* ------------ Custom Calendar Style ------------ */
+
+/* ------ Upcoming Events ------  */
+.up-events {
+  margin-bottom: 1.5rem;
+}
+
+.up-events > h2 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.events-cards {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ------------ Calendar ------------ */
+.calendar-title {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.fullcalendar-container {
+  background: var(--white-color);
+  border: 1px solid #e1e7ef;
+}
+
+/* Render Event Content */
+.event-content {
+  width: 92%;
+  padding: 0 5px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.event-text {
+  color: #fff;
+}

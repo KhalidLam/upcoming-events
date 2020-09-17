@@ -1,3 +1,4 @@
+/* ------------ Override FullCalendar styles  ------------ */
 :root {
   --fc-bg-event-opacity: 0.7;
   --fc-button-text-color: #000;
@@ -8,31 +9,6 @@
   --fc-button-active-bg-color: transparent;
   --fc-button-active-border-color: transparent;
 }
-
-/* ------------ Custom Calendar Style ------------ */
-.my-calendar > h2 {
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
-
-.fullcalendar-container {
-  background: var(--white-color);
-  border: 1px solid #e1e7ef;
-}
-
-/* Event Box */
-.event-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.event-text {
-  color: #fff;
-}
-
-/* ------------ Override FullCalendar styles  ------------ */
 
 /* --- Toolbar Header --- */
 .fc-toolbar-chunk > div {
@@ -68,6 +44,10 @@
   margin: 0;
 }
 
+.fc .fc-button .fc-icon {
+  vertical-align: initial;
+}
+
 /* --- Day Header --- */
 .fc .fc-scrollgrid {
   border: 0;
@@ -82,7 +62,7 @@
   border: 1px dashed #ddd;
 }
 
-/* Week Days Header Cell */
+/* Week Days Header */
 
 .fc .fc-col-header-cell-cushion {
   padding-top: 4px;

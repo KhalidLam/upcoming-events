@@ -1,0 +1,33 @@
+.card {
+  min-width: 253px;
+  min-height: 208px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  margin-right: 1.5rem;
+  padding: 1rem;
+}
+
+.card-title {
+  color: #27303f;
+  font-weight: normal;
+}
+
+.card-subtitle {
+  font-weight: normal;
+  color: #65758b;
+}
+
+.card-text {
+  font-weight: 600;
+  color: #364253;
+}
+
+.card-border {
+  border: 1px solid #1c64f2;
+}
+
+.card:hover {
+  border: 1px solid #1c64f2;
+}

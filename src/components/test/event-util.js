@@ -25,6 +25,7 @@ export const INITIAL_EVENTS = [
     display: "background",
     color: "#2D9CDB",
   },
+  
   // {
   //   id: createEventId(),
   //   title: "All-day event",

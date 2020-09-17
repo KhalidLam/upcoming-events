@@ -1,30 +1,33 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className='navbar'>
-      <ul className='nav-list'>
-        <li className='nav-item'>
-          <a href='sa'>Dashboard</a>
-        </li>
-        <li className='nav-item'>
-          <a href='sa'>Startup School</a>
-        </li>
-        <li className='nav-item active'>
-          <a href='sa' className='active'>
-            Calendar
-          </a>
-        </li>
-        <li className='nav-item'>
-          <a href='sa'>Applications</a>
-        </li>
-        <li className='nav-item'>
-          <a href='sa'>Investors</a>
-        </li>
-        <li className='nav-item'>
-          <a href='sa'>Upcoming Events</a>
-        </li>
-      </ul>
+    <nav className='navbar bg-white'>
+      <div className='container'>
+        <ul className='nav-list'>
+          <li className='nav-item'>
+            <NavLink exact to='/'>
+              Dashboard
+            </NavLink>
+          </li>
+          <li className='nav-item'>
+            <NavLink to='/startupschool'>Startup School</NavLink>
+          </li>
+          <li className='nav-item active'>
+            <NavLink to='/calendar'>Calendar</NavLink>
+          </li>
+          <li className='nav-item'>
+            <NavLink to='/applications'>Applications</NavLink>
+          </li>
+          <li className='nav-item'>
+            <NavLink to='/investors'>Investors</NavLink>
+          </li>
+          <li className='nav-item'>
+            <NavLink to='/upcomingevents'>Upcoming Events</NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

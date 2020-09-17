@@ -1,32 +1,46 @@
 [
   {
-    "groupId": "redEvents",
-    "title": "Event 2",
-    "startRecur": "2020-09-14",
-    "endRecur": "2020-09-17",
+    "id": "1",
+    "title": "Meeting One to One",
+    "date": "2020-09-04",
     "display": "background",
-    "color": "#d44646"
+    "color": "#219653"
   },
   {
-    "groupId": "blueEvents",
-    "title": "Meeting one to one",
-    "startRecur": "2020-09-11",
-    "endRecur": "2020-09-13",
+    "id": "2",
+    "title": "Hackathon",
+    "date": "2020-09-07",
     "display": "background",
-    "color": "#1e32ca"
+    "color": "#219653"
+  },
+  {
+    "id": "3",
+    "groupId": "startupSchool",
+    "title": "Startup School Meetup",
+    "startRecur": "2020-09-09",
+    "endRecur": "2020-09-11",
+    "display": "background",
+    "color": "#2D9CDB"
+  },
+  {
+    "id": "4",
+    "title": "Match & Invest",
+    "date": "2020-09-12",
+    "display": "background",
+    "color": "#828282"
   },
   {
     "id": "5",
-    "title": "Event 3",
-    "date": "2020-10-01",
+    "title": "Scalerator - Meeting",
+    "date": "2020-09-19",
     "display": "background",
-    "color": "#2D9CDB"
+    "color": "#9B51E0"
   },
   {
-    "id": "54",
-    "title": "Event 54",
-    "date": "2020-09-25",
+    "id": "6",
+    "title": "Training - design thinking",
+    "date": "2020-09-23",
     "display": "background",
-    "color": "#2D9CDB"
+    "color": "#F2994A"
   }
 ]
