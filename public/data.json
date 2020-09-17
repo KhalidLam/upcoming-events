@@ -2,45 +2,74 @@
   {
     "id": "1",
     "title": "Meeting One to One",
-    "date": "2020-09-04",
+    "start": "T08:30:00",
+    "end": "T18:30:00",
+    "startRecur": "2020-09-04",
+    "endRecur": "2020-09-05",
     "display": "background",
-    "color": "#219653"
+    "color": "#219653",
+    "classNames": "cellClass",
+    "location": "@ LaStartupFactory Office"
   },
   {
     "id": "2",
     "title": "Hackathon",
-    "date": "2020-09-07",
+    "start": "T08:30:00",
+    "end": "T18:30:00",
+    "startRecur": "2020-09-07",
+    "endRecur": "2020-09-08",
     "display": "background",
-    "color": "#219653"
+    "color": "#219653",
+    "classNames": "cellClass",
+    "location": "@ LaStartupFactory Office"
   },
   {
     "id": "3",
     "groupId": "startupSchool",
     "title": "Startup School Meetup",
+    "start": "T08:30:00",
+    "end": "T18:30:00",
     "startRecur": "2020-09-09",
     "endRecur": "2020-09-11",
     "display": "background",
-    "color": "#2D9CDB"
+    "color": "#2D9CDB",
+    "classNames": "cellClass",
+    "location": "@ LaStartupFactory Office"
   },
   {
     "id": "4",
     "title": "Match & Invest",
-    "date": "2020-09-12",
+    "start": "T08:30:00",
+    "end": "T18:30:00",
+    "startRecur": "2020-09-12",
+    "endRecur": "2020-09-13",
     "display": "background",
-    "color": "#828282"
+    "color": "#828282",
+    "classNames": "cellClass",
+    "location": "@ LaStartupFactory Office"
   },
   {
     "id": "5",
     "title": "Scalerator - Meeting",
-    "date": "2020-09-19",
+    "start": "T08:30:00",
+    "end": "T18:30:00",
+    "startRecur": "2020-09-19",
+    "endRecur": "2020-09-20",
     "display": "background",
-    "color": "#9B51E0"
+    "color": "#9B51E0",
+    "classNames": "cellClass",
+    "location": "@ LaStartupFactory Office"
   },
   {
     "id": "6",
     "title": "Training - design thinking",
-    "date": "2020-09-23",
+    "start": "T08:30:00",
+    "end": "T18:30:00",
+    "startRecur": "2020-09-23",
+    "endRecur": "2020-09-24",
     "display": "background",
-    "color": "#F2994A"
+    "color": "#F2994A",
+    "classNames": "cellClass",
+    "location": "@ LaStartupFactory Office"
   }
 ]

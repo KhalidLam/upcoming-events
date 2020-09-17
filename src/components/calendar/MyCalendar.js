@@ -13,7 +13,7 @@ const MyCalendar = () => {
         return resp.json();
       })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setEventsData(res);
       });
   }, []);
@@ -32,6 +32,16 @@ const MyCalendar = () => {
       firstDay={1}
       events={eventsData}
       eventContent={renderEventContent}
+      // dayCellClassNames={["tdClassName", "otherclassname"]}
+
+      eventClassNames={function (arg) {
+        // console.log(arg.event);
+        if (arg.event.extendedProps.isUrgent) {
+          return ["urgent"];
+        } else {
+          return ["normal"];
+        }
+      }}
     />
   );
 };

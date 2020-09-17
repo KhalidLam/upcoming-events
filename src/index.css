@@ -2,7 +2,8 @@
 
 /* --------------- Global Styles --------------- */
 :root {
-  --white-color: #fbfdfe;
+  --white-color: #fff;
+  --cool-gray: #fbfdfe;
   --dark-color: #1a202e;
   --gray-color: #e5e5e5;
   --light-gray-color: #65758b;
@@ -22,7 +23,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  background-color: #f3f4f6;
+  background-color: var(--gray-color);
   color: #424d5d;
 }
 
@@ -44,7 +45,7 @@ img {
   max-width: 1150px;
   margin: 0 auto;
   padding: 0;
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
   /* overflow: hidden; */
 }
 
@@ -69,6 +70,10 @@ img {
 /* Background */
 .bg-white {
   background-color: var(--white-color);
+}
+
+.bg-gray {
+  background-color: var(--cool-gray);
 }
 
 /* Text Styles*/
@@ -240,7 +245,7 @@ img {
 .jumbotron {
   /* padding: 0.7rem 0 7rem; */
   padding: 7rem 0;
-  background-color: #fff;
+  background-color: var(--cool-gray);
   /* margin-bottom: 2rem; */
 }
 
@@ -274,6 +279,7 @@ img {
   border-radius: 4px;
   z-index: 2;
   margin-top: -4rem;
+  background-color: var(--white-color);
 }
 
 /* Mobile Styles */

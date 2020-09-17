@@ -5,10 +5,10 @@ import "./eventCard.css";
 
 const EventCard = ({ event: { date, month, title, time, host } }) => {
   return (
-    <div className='card'>
+    <div className='card bg-gray'>
       <div className='card-header'>
         <h2 className='card-title text-xxl'>{date}</h2>
-        <h4 class='card-subtitle text-muted'>{month}</h4>
+        <h4 className='card-subtitle text-muted'>{month}</h4>
       </div>
       <div className='card-body'>
         <p className='card-text text-l'>{title}</p>

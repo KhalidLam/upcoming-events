@@ -1,4 +1,5 @@
 /* ------------ Override FullCalendar styles  ------------ */
+
 :root {
   --fc-bg-event-opacity: 0.7;
   --fc-button-text-color: #000;
@@ -11,18 +12,24 @@
 }
 
 /* --- Toolbar Header --- */
-.fc-toolbar-chunk > div {
+
+.fc-toolbar-chunk>div {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .fc .fc-toolbar.fc-header-toolbar {
-  margin-top: 0.5rem;
-  margin-bottom: 1em;
+  margin-bottom: 0rem;
+  padding: 0.5rem 0;
 }
 
-/* Arrow Buttons */
+.fc-toolbar.fc-header-toolbar, .fc-theme-standard th {
+  background-color: #fbfdfe;
+}
+
+/* Toolbar Arrow Buttons */
+
 .fc .fc-button-primary {
   padding: 0;
 }
@@ -31,12 +38,12 @@
   color: #364253;
 }
 
-.fc .fc-button-primary:focus,
-.fc .fc-button-primary:not(:disabled):active:focus {
+.fc .fc-button-primary:focus, .fc .fc-button-primary:not(:disabled):active:focus {
   box-shadow: none;
 }
 
 /* Toolbar Title */
+
 .fc .fc-toolbar-title {
   font-size: 14px;
   padding: 0 1rem;
@@ -49,6 +56,7 @@
 }
 
 /* --- Day Header --- */
+
 .fc .fc-scrollgrid {
   border: 0;
 }
@@ -56,6 +64,7 @@
 .fc-theme-standard th {
   border: none !important;
   border-bottom: 1px dashed #ddd !important;
+  background-color: #fbfdfe;
 }
 
 .fc-theme-standard td {
@@ -78,3 +87,26 @@
 .fc .fc-daygrid-day-top {
   flex-direction: row;
 }
+
+.fc .fc-daygrid-day-number {
+  color: #A2A2A2;
+}
+
+/* td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-past .fc-daygrid-day-number {
+  color: #fff !important;
+} */
+
+/* .tdClassName .fc-daygrid-day-number {
+  color: #fff !important;
+}
+.otherclassname .fc-daygrid-day-number {
+  color: #A2A2A2 !important;
+} */
+
+/* .fc-daygrid-day:has(> div.cellClass) {
+  color: #fff !important;
+} */
+
+/* .cellClass {
+  color: #FFF;
+} */

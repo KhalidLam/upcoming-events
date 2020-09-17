@@ -22,7 +22,7 @@ const Calendar = () => {
         {/* Calendar */}
         <div className='calendar'>
           <h2 className='calendar-title text-l text-dark-gray'>My Calendar</h2>
-          <div className='fullcalendar-container bg-white'>
+          <div className='fullcalendar-container'>
             <MyCalendar />
           </div>
         </div>

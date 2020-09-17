@@ -25,7 +25,7 @@ export const INITIAL_EVENTS = [
     display: "background",
     color: "#2D9CDB",
   },
-  
+
   // {
   //   id: createEventId(),
   //   title: "All-day event",
@@ -92,3 +92,28 @@ export const INITIAL_EVENTS = [
 export function createEventId() {
   return String(eventGuid++);
 }
+
+
+const events = [
+  {
+    date: "10",
+    month: "September",
+    title: "Startup 2m - Meetup",
+    time: "8:30 AM -- 18h30 PM",
+    location: "@ LaStartupFactory Office",
+  },
+  {
+    date: "13 - 14",
+    month: "September",
+    title: "Hackathon xyz",
+    time: "8:30 AM -- 18h30 PM",
+    location: "@ LaStartupFactory Office",
+  },
+  {
+    date: "23",
+    month: "September",
+    title: "Scaletor (Batch 5)",
+    time: "8:30 AM -- 18h30 PM",
+    location: "@ LaStartupFactory Office",
+  },
+];

@@ -1,38 +1,89 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import EventCard from "../eventCard/EventCard";
 
 const UpEvents = () => {
-  const events = [
-    {
-      date: "10",
-      month: "September",
-      title: "Startup 2m - Meetup",
-      time: "8:30 AM -- 18h30 PM",
-      host: "@ LaStartupFactory Office",
-    },
-    {
-      date: "13 - 14",
-      month: "September",
-      title: "Hackathon xyz",
-      time: "8:30 AM -- 18h30 PM",
-      host: "@ LaStartupFactory Office",
-    },
-    {
-      date: "23",
-      month: "September",
-      title: "Scaletor (Batch 5)",
-      time: "8:30 AM -- 18h30 PM",
-      host: "@ LaStartupFactory Office",
-    },
-  ];
+  const [eventsData, setEventsData] = useState([]);
+
+  useEffect(() => {
+    fetch("./data.json")
+      .then((resp) => {
+        return resp.json();
+      })
+      .then((res) => {
+        setEventsData(res);
+      });
+  }, []);
+
+  const filteredEvents = eventsData.map((event) => {
+    return {
+      date: getDate(event.startRecur, event.endRecur),
+      month: getMonth(event.startRecur),
+      title: event.title,
+      time: `${formatAMPM(
+        new Date(event.startRecur + event.start)
+      )} -- ${formatAMPM(new Date(event.startRecur + event.end))}`,
+      location: event.location,
+    };
+  });
 
   return (
     <Fragment>
-      {events.map((event) => (
-        <EventCard event={event} />
-      ))}
+      {eventsData.length &&
+        filteredEvents
+          .splice(0, 3)
+          .map((event, index) => <EventCard key={index} event={event} />)}
     </Fragment>
   );
 };
 
 export default UpEvents;
+
+
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  var strTime = hours + ":" + minutes + " " + ampm;
+  return strTime;
+}
+
+function getMonth(date) {
+  var arr = date.split("-");
+  var months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  var month_index = parseInt(arr[1], 10) - 1;
+  return months[month_index];
+  // console.log("The current month is " + months[month_index]);
+}
+function getDate(start, end){
+  const date1 = new Date(start);
+  const date2 = new Date(end);
+  const diffTime = Math.abs(date2 - date1);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  if(diffDays === 1) return date1.getDate();
+  return `${date1.getDate()} - ${date2.getDate()}`
+}
+
+// function getDayString(start, end) {
+//   const startDay = start.split("-")[2];
+//   const endDay = end.split("-")[2];
+//   const dayDiff = Math.abs(parseInt(endDay) - parseInt(startDay));
+//   if (dayDiff === 1) return startDay;
+//   return `${startDay} - ${endDay}`;
+//   // console.log(`${startDay} - ${endDay}`);
+// }

@@ -1,11 +1,12 @@
 /* ------------ Custom Calendar Style ------------ */
 
 /* ------ Upcoming Events ------  */
+
 .up-events {
   margin-bottom: 1.5rem;
 }
 
-.up-events > h2 {
+.up-events>h2 {
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
@@ -13,9 +14,11 @@
 .events-cards {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 /* ------------ Calendar ------------ */
+
 .calendar-title {
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -27,6 +30,7 @@
 }
 
 /* Render Event Content */
+
 .event-content {
   width: 92%;
   padding: 0 5px;
