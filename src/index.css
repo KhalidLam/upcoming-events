@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
-
 /* --------------- Global Styles --------------- */
+
 :root {
   --white-color: #fff;
   --cool-gray: #fbfdfe;
@@ -41,6 +41,7 @@ img {
 }
 
 /* --------------- Utilities --------------- */
+
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -50,6 +51,7 @@ img {
 }
 
 /* Image */
+
 .round-img {
   border-radius: 50%;
 }
@@ -59,6 +61,7 @@ img {
 }
 
 /* Border for test  */
+
 .border {
   border: 1px dashed #25a4eb;
 }
@@ -68,6 +71,7 @@ img {
 }
 
 /* Background */
+
 .bg-white {
   background-color: var(--white-color);
 }
@@ -77,6 +81,7 @@ img {
 }
 
 /* Text Styles*/
+
 .text-xxl {
   font-size: 36px;
   line-height: 1.2;
@@ -272,6 +277,7 @@ img {
 }
 
 /* ------ Events ------ */
+
 .events-container {
   padding: 1.5rem;
   border: 1px solid #f1f5f9;
@@ -283,43 +289,29 @@ img {
 }
 
 /* Mobile Styles */
+
 @media (max-width: 720px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 5px;
+  }
+  .jumbotron {
+    padding: 7rem 5px;
+  }
   .hide-sm {
     display: none;
   }
-
   /* NavBar */
   .navbar {
     display: block;
     text-align: center;
   }
-
   .nav-list {
     justify-content: center;
     flex-direction: column;
   }
-
   .nav-item {
     margin-bottom: 1rem;
   }
-
-  /*
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  .x-large {
-    font-size: 3rem;
-  }
-
-  .large {
-    font-size: 2rem;
-  }
-
-  .lead {
-    font-size: 1rem;
-  }
-*/
 }

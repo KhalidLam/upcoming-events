@@ -14,7 +14,8 @@ const UpEvents = () => {
       });
   }, []);
 
-  const filteredEvents = eventsData.map((event) => {
+  // .filter(event => isNotPased(event.startRecur) )
+  const filteredEvents = eventsData.filter(event => isNotPased(event.startRecur)).map((event) => {
     return {
       date: getDate(event.startRecur, event.endRecur),
       month: getMonth(event.startRecur),
@@ -70,6 +71,7 @@ function getMonth(date) {
   return months[month_index];
   // console.log("The current month is " + months[month_index]);
 }
+
 function getDate(start, end){
   const date1 = new Date(start);
   const date2 = new Date(end);
@@ -79,11 +81,9 @@ function getDate(start, end){
   return `${date1.getDate()} - ${date2.getDate()}`
 }
 
-// function getDayString(start, end) {
-//   const startDay = start.split("-")[2];
-//   const endDay = end.split("-")[2];
-//   const dayDiff = Math.abs(parseInt(endDay) - parseInt(startDay));
-//   if (dayDiff === 1) return startDay;
-//   return `${startDay} - ${endDay}`;
-//   // console.log(`${startDay} - ${endDay}`);
-// }
+
+function isNotPased(date){
+  const currentDate = new Date().getTime();
+  const otherdate = new Date(date).getTime();
+  return (currentDate - otherdate) < 0;
+}

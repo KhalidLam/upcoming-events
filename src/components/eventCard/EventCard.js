@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./eventCard.css";
 
-const EventCard = ({ event: { date, month, title, time, host } }) => {
+const EventCard = ({ event: { date, month, title, time, location } }) => {
   return (
     <div className='card bg-gray'>
       <div className='card-header'>
@@ -15,7 +15,7 @@ const EventCard = ({ event: { date, month, title, time, host } }) => {
       </div>
       <div className='card-footer'>
         <p className='event-time text-s text-blue'>{time}</p>
-        <p className='event-creator text-s text-muted'>{host}</p>
+        <p className='event-creator text-s text-muted'>{location}</p>
       </div>
     </div>
   );
@@ -29,7 +29,7 @@ EventCard.defaultProps = {
     month: "September",
     title: "Startup 2m - Meetup",
     time: "8:30 AM -- 18h30 PM",
-    host: "@ LaStartupFactory Office",
+    location: "@ LaStartupFactory Office",
   },
 };
 
