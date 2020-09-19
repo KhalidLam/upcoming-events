@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
 import "./fullcalendar.css";
 
-const MyCalendar = () => {
-  const [eventsData, setEventsData] = useState([]);
-
-  useEffect(() => {
-    fetch("./data.json")
-      .then((resp) => {
-        return resp.json();
-      })
-      .then((res) => {
-        // console.log(res);
-        setEventsData(res);
-      });
-  }, []);
+const MyCalendar = ({eventsData}) => {
 
   return (
     <FullCalendar

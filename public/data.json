@@ -71,5 +71,17 @@
     "color": "#F2994A",
     "classNames": "cellClass",
     "location": "@ LaStartupFactory Office"
+  },
+  {
+    "id": "8",
+    "title": "Training - design thinking",
+    "start": "T08:30:00",
+    "end": "T18:30:00",
+    "startRecur": "2020-10-13",
+    "endRecur": "2020-10-15",
+    "display": "background",
+    "color": "#F2994A",
+    "classNames": "cellClass",
+    "location": "@ LaStartupFactory Office"
   }
 ]

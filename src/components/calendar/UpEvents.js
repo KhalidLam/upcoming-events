@@ -1,31 +1,20 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import EventCard from "../eventCard/EventCard";
 
-const UpEvents = () => {
-  const [eventsData, setEventsData] = useState([]);
-
-  useEffect(() => {
-    fetch("./data.json")
-      .then((resp) => {
-        return resp.json();
-      })
-      .then((res) => {
-        setEventsData(res);
-      });
-  }, []);
-
-  // .filter(event => isNotPased(event.startRecur) )
-  const filteredEvents = eventsData.filter(event => isNotPased(event.startRecur)).map((event) => {
-    return {
-      date: getDate(event.startRecur, event.endRecur),
-      month: getMonth(event.startRecur),
-      title: event.title,
-      time: `${formatAMPM(
-        new Date(event.startRecur + event.start)
-      )} -- ${formatAMPM(new Date(event.startRecur + event.end))}`,
-      location: event.location,
-    };
-  });
+const UpEvents = ({ eventsData }) => {
+  const filteredEvents = eventsData
+    .filter((event) => isNotPased(event.startRecur))
+    .map((event) => {
+      return {
+        date: getDate(event.startRecur, event.endRecur),
+        month: getMonth(event.startRecur),
+        title: event.title,
+        time: `${formatAMPM(
+          new Date(event.startRecur + event.start)
+        )} -- ${formatAMPM(new Date(event.startRecur + event.end))}`,
+        location: event.location,
+      };
+    });
 
   return (
     <Fragment>
@@ -38,7 +27,6 @@ const UpEvents = () => {
 };
 
 export default UpEvents;
-
 
 function formatAMPM(date) {
   var hours = date.getHours();
@@ -69,21 +57,19 @@ function getMonth(date) {
   ];
   var month_index = parseInt(arr[1], 10) - 1;
   return months[month_index];
-  // console.log("The current month is " + months[month_index]);
 }
 
-function getDate(start, end){
+function getDate(start, end) {
   const date1 = new Date(start);
   const date2 = new Date(end);
   const diffTime = Math.abs(date2 - date1);
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  if(diffDays === 1) return date1.getDate();
-  return `${date1.getDate()} - ${date2.getDate()}`
+  if (diffDays === 1) return date1.getDate();
+  return `${date1.getDate()} - ${date2.getDate()}`;
 }
 
-
-function isNotPased(date){
+function isNotPased(date) {
   const currentDate = new Date().getTime();
   const otherdate = new Date(date).getTime();
-  return (currentDate - otherdate) < 0;
+  return currentDate - otherdate < 0;
 }
